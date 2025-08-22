@@ -5,12 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="clean">
+      <change afterPath="$PROJECT_DIR$/src/todo/application/QueryKey.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo/application/TodosContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo/application/TodosProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo/application/useTodos.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo/domain/Todo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo/domain/TodoPort.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo/infrastructure/secondary/TodosAdapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="React component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755872517514</updated>
-      <workItem from="1755872519468" duration="1859000" />
+      <workItem from="1755872519468" duration="5334000" />
     </task>
     <task id="LOCAL-00001" summary="init app">
       <option name="closed" value="true" />
@@ -98,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755874373160</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="clean">
+      <option name="closed" value="true" />
+      <created>1755874383775</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1755874383775</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

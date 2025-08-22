@@ -1,0 +1,1 @@
+export const GET_TODOS_QUERY_KEY = "GET_TODOS"
