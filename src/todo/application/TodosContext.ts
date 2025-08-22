@@ -4,6 +4,7 @@ import type { UseQueryResult } from "@tanstack/react-query";
 
 interface TodosContextValue {
   todos: UseQueryResult<Array<Todo>, Error>
+  addTodo: (todo: Todo) => void
 }
 
 export const TodosContext = createContext<TodosContextValue>({} as TodosContextValue);
