@@ -10,6 +10,7 @@ import { routeTree } from './routeTree.gen'
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 import {TodosProvider} from "@/todo/application/TodosProvider.tsx";
+import TodosAdapter from "@/todo/infrastructure/secondary/TodosAdapter.ts";
 
 // Create a new router instance
 const router = createRouter({
@@ -38,7 +39,7 @@ if (rootElement && !rootElement.innerHTML) {
     <StrictMode>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left" />
-        <TodosProvider>
+        <TodosProvider repository={new TodosAdapter()}>
           <RouterProvider router={router} />
         </TodosProvider>
       </QueryClientProvider>

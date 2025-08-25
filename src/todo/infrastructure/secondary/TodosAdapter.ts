@@ -1,4 +1,4 @@
-import type { Todo } from "@/todo/domain/Todo";
+import type {Todo} from "@/todo/domain/Todo";
 import type {TodoPort} from "@/todo/domain/TodoPort.ts";
 
 export default class TodosAdapter implements TodoPort {
@@ -13,6 +13,15 @@ export default class TodosAdapter implements TodoPort {
     this.persistTodos([...this.retrieveTodos(), todo])
     return Promise.resolve();
   }
+
+  getStats() {
+    const todos = this.retrieveTodos();
+    return Promise.resolve({
+      total: todos.length,
+      totalCompleted: todos.filter(todo => todo.completed).length,
+      totalRemaining: todos.filter(todo => !todo.completed).length
+    });
+  };
 
   private persistTodos(todos: Array<Todo>) {
     sessionStorage.setItem(this.CACHE_KEY, JSON.stringify(todos))

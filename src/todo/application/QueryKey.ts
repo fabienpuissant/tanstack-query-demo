@@ -1,1 +1,2 @@
 export const GET_TODOS_QUERY_KEY = "GET_TODOS"
+export const GET_STATS_QUERY_KEY = "GET_STATS"
