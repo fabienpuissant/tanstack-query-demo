@@ -14,6 +14,22 @@ export default class TodosAdapter implements TodoPort {
     return Promise.resolve();
   }
 
+  toggleTodo(todoId: string) {
+    const todos = this.retrieveTodos();
+    const updatedTodos = todos.map(todo =>
+      todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
+    );
+    this.persistTodos(updatedTodos);
+    return Promise.resolve();
+  }
+
+  deleteTodo(todoId: string) {
+    const todos = this.retrieveTodos();
+    const updatedTodos = todos.filter(todo => todo.id !== todoId);
+    this.persistTodos(updatedTodos);
+    return Promise.resolve();
+  }
+
   getStats() {
     const todos = this.retrieveTodos();
     return Promise.resolve({

@@ -3,7 +3,7 @@ import {useTodos} from "@/todo/application/useTodos.ts";
 
 export default function TodosList() {
 
-  const {todos} = useTodos();
+  const {todos, toggleTodo, deleteTodo} = useTodos();
 
   return (
     <div className="space-y-3">
@@ -23,7 +23,7 @@ export default function TodosList() {
           >
             <div className="flex items-start gap-4">
               <button
-                // onClick={() => toggleTodo(todo.id)}
+                onClick={() => toggleTodo(todo.id)}
                 className="mt-1 cursor-pointer text-gray-400 hover:text-indigo-500 transition-colors"
               >
                 {todo.completed ? (
@@ -50,7 +50,7 @@ export default function TodosList() {
 
               <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <button
-                  // onClick={() => deleteTodo(todo.id)}
+                  onClick={() => deleteTodo(todo.id)}
                   className="text-gray-400 cursor-pointer hover:text-red-500 transition-colors p-1"
                 >
                   <Trash2 className="w-4 h-4"/>

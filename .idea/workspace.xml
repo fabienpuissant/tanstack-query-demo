@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="refactor into components">
-      <change afterPath="$PROJECT_DIR$/src/todo/domain/Stats.ts" afterDir="false" />
+    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="refactor stats components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/application/QueryKey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/application/QueryKey.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/todo/application/TodosContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/application/TodosContext.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/todo/application/TodosProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/application/TodosProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/application/useTodos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/application/useTodos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/todo/domain/TodoPort.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/domain/TodoPort.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosStats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/todo/infrastructure/secondary/TodosAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/infrastructure/secondary/TodosAdapter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +50,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/superman/dev/workspaces/tanstack-query-demo/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -77,7 +73,9 @@
       <workItem from="1755872519468" duration="8248000" />
       <workItem from="1756103417413" duration="324000" />
       <workItem from="1756103754319" duration="172000" />
-      <workItem from="1756104081627" duration="2757000" />
+      <workItem from="1756104081627" duration="4057000" />
+      <workItem from="1756707805097" duration="520000" />
+      <workItem from="1756708335565" duration="478000" />
     </task>
     <task id="LOCAL-00001" summary="init app">
       <option name="closed" value="true" />
@@ -143,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756104366734</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor stats components">
+      <option name="closed" value="true" />
+      <created>1756106873678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756106873678</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +160,7 @@
     <MESSAGE value="clean" />
     <MESSAGE value="fetch todos" />
     <MESSAGE value="refactor into components" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor into components" />
+    <MESSAGE value="refactor stats components" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor stats components" />
   </component>
 </project>

@@ -13,22 +13,44 @@ export const TodosProvider = ({repository, children}: { repository: TodoPort, ch
   const query = useQuery({queryKey: [GET_TODOS_QUERY_KEY], queryFn: () => repository.getTodos()})
   const statsQuery = useQuery({queryKey: [GET_STATS_QUERY_KEY], queryFn: () => repository.getStats()})
 
-  const mutation = useMutation({
+  const refreshTodos = () => {
+    queryClient.invalidateQueries({queryKey: [GET_TODOS_QUERY_KEY]})
+    queryClient.invalidateQueries({queryKey: [GET_STATS_QUERY_KEY]})
+  }
+
+  const addMutation = useMutation({
     mutationFn: (todo: Todo) => repository.addTodo(todo),
-    onSuccess: () => {
-      queryClient.invalidateQueries({queryKey: [GET_TODOS_QUERY_KEY]})
-      queryClient.invalidateQueries({queryKey: [GET_STATS_QUERY_KEY]})
-    },
+    onSuccess: refreshTodos,
+  })
+
+  const toggleMutation = useMutation({
+    mutationFn: (todoId: string) => repository.toggleTodo(todoId),
+    onSuccess: refreshTodos,
+  })
+
+  const deleteMutation = useMutation({
+    mutationFn: (todoId: string) => repository.deleteTodo(todoId),
+    onSuccess: refreshTodos,
   })
 
   const addTodo = (todo: Todo) => {
-    mutation.mutate(todo)
+    addMutation.mutate(todo)
+  }
+
+  const toggleTodo = (todoId: string) => {
+    toggleMutation.mutate(todoId);
+  }
+
+  const deleteTodo = (todoId: string) => {
+    deleteMutation.mutate(todoId);
   }
 
   const contextValue = useMemo(() => ({
     todos: query,
+    stats: statsQuery,
     addTodo,
-    stats: statsQuery
+    toggleTodo,
+    deleteTodo
   }), [query])
 
   return <TodosContext.Provider value={contextValue}>{children}</TodosContext.Provider>;

@@ -7,6 +7,8 @@ interface TodosContextValue {
   todos: UseQueryResult<Array<Todo>, Error>
   addTodo: (todo: Todo) => void
   stats: UseQueryResult<TodoStats, Error>
+  toggleTodo: (todoId: string) => void
+  deleteTodo: (todoId: string) => void
 }
 
 const todosContext = createContext<TodosContextValue>({} as TodosContextValue);
