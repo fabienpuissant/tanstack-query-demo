@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="refactor stats components">
+    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="crud ok">
+      <change afterPath="$PROJECT_DIR$/src/todo/infrastructure/secondary/FailingTodosAdapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/application/TodosContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/application/TodosContext.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/todo/application/TodosProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/application/TodosProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/domain/TodoPort.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/domain/TodoPort.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/infrastructure/secondary/TodosAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/infrastructure/secondary/TodosAdapter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,26 +35,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/superman/dev/workspaces/tanstack-query-demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/superman/dev/workspaces/tanstack-query-demo/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/superman/dev/workspaces/tanstack-query-demo/src/todo/infrastructure/secondary",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/superman/dev/workspaces/tanstack-query-demo/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/todo/infrastructure/secondary" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,7 +80,7 @@
       <workItem from="1756103754319" duration="172000" />
       <workItem from="1756104081627" duration="4057000" />
       <workItem from="1756707805097" duration="520000" />
-      <workItem from="1756708335565" duration="478000" />
+      <workItem from="1756708335565" duration="1882000" />
     </task>
     <task id="LOCAL-00001" summary="init app">
       <option name="closed" value="true" />
@@ -149,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756106873678</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="crud ok">
+      <option name="closed" value="true" />
+      <created>1756709062241</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756709062241</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +174,7 @@
     <MESSAGE value="fetch todos" />
     <MESSAGE value="refactor into components" />
     <MESSAGE value="refactor stats components" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor stats components" />
+    <MESSAGE value="crud ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="crud ok" />
   </component>
 </project>

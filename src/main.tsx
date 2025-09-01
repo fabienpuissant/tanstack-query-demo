@@ -1,16 +1,17 @@
-import { StrictMode } from 'react'
+import {StrictMode} from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createRouter } from '@tanstack/react-router'
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import {createRouter, RouterProvider} from '@tanstack/react-router'
+import {MutationCache, QueryClient, QueryClientProvider} from "@tanstack/react-query"
+import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 
 // Import the generated route tree
-import { routeTree } from './routeTree.gen'
+import {toast, Toaster} from "react-hot-toast";
+import {routeTree} from './routeTree.gen'
 
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 import {TodosProvider} from "@/todo/application/TodosProvider.tsx";
-import TodosAdapter from "@/todo/infrastructure/secondary/TodosAdapter.ts";
+import FailingTodosAdapter from "@/todo/infrastructure/secondary/FailingTodosAdapter.ts";
 
 // Create a new router instance
 const router = createRouter({
@@ -29,7 +30,18 @@ declare module '@tanstack/react-router' {
   }
 }
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    mutations: {
+      retry: 3,
+    },
+  },
+  mutationCache: new MutationCache({
+    onError: (_error) => {
+      toast.error("Ho Fuck")
+    }
+  })
+})
 
 // Render the app
 const rootElement = document.getElementById('app')
@@ -37,9 +49,10 @@ if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
+      <Toaster />
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left" />
-        <TodosProvider repository={new TodosAdapter()}>
+        <TodosProvider repository={new FailingTodosAdapter()}>
           <RouterProvider router={router} />
         </TodosProvider>
       </QueryClientProvider>

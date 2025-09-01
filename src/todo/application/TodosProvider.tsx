@@ -13,9 +13,11 @@ export const TodosProvider = ({repository, children}: { repository: TodoPort, ch
   const query = useQuery({queryKey: [GET_TODOS_QUERY_KEY], queryFn: () => repository.getTodos()})
   const statsQuery = useQuery({queryKey: [GET_STATS_QUERY_KEY], queryFn: () => repository.getStats()})
 
-  const refreshTodos = () => {
-    queryClient.invalidateQueries({queryKey: [GET_TODOS_QUERY_KEY]})
-    queryClient.invalidateQueries({queryKey: [GET_STATS_QUERY_KEY]})
+  const refreshTodos = async () => {
+    await Promise.all([
+      queryClient.invalidateQueries({queryKey: [GET_TODOS_QUERY_KEY]}),
+      queryClient.invalidateQueries({queryKey: [GET_STATS_QUERY_KEY]})
+    ])
   }
 
   const addMutation = useMutation({
