@@ -1,17 +1,17 @@
 import {StrictMode} from 'react'
 import ReactDOM from 'react-dom/client'
-import {createRouter, RouterProvider} from '@tanstack/react-router'
+import {RouterProvider, createRouter} from '@tanstack/react-router'
 import {MutationCache, QueryClient, QueryClientProvider} from "@tanstack/react-query"
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 
 // Import the generated route tree
-import {toast, Toaster} from "react-hot-toast";
+import {Toaster, toast} from "react-hot-toast";
 import {routeTree} from './routeTree.gen'
 
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 import {TodosProvider} from "@/todo/application/TodosProvider.tsx";
-import FailingTodosAdapter from "@/todo/infrastructure/secondary/FailingTodosAdapter.ts";
+import TodosAdapter from "@/todo/infrastructure/secondary/TodosAdapter.ts";
 
 // Create a new router instance
 const router = createRouter({
@@ -33,7 +33,7 @@ declare module '@tanstack/react-router' {
 const queryClient = new QueryClient({
   defaultOptions: {
     mutations: {
-      retry: 3,
+      retry: false,
     },
   },
   mutationCache: new MutationCache({
@@ -52,7 +52,7 @@ if (rootElement && !rootElement.innerHTML) {
       <Toaster />
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left" />
-        <TodosProvider repository={new FailingTodosAdapter()}>
+        <TodosProvider repository={new TodosAdapter()}>
           <RouterProvider router={router} />
         </TodosProvider>
       </QueryClientProvider>

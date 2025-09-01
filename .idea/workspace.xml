@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="crud ok">
-      <change afterPath="$PROJECT_DIR$/src/todo/infrastructure/secondary/FailingTodosAdapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="failing adapter">
       <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/application/TodosProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/application/TodosProvider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +20,37 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="failing-retry-configuration" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1756710302" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="failing-retry-configuration" />
+                    <option name="lastUsedInstant" value="1756710297" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -80,7 +105,7 @@
       <workItem from="1756103754319" duration="172000" />
       <workItem from="1756104081627" duration="4057000" />
       <workItem from="1756707805097" duration="520000" />
-      <workItem from="1756708335565" duration="1882000" />
+      <workItem from="1756708335565" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="init app">
       <option name="closed" value="true" />
@@ -162,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756709062241</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="failing adapter">
+      <option name="closed" value="true" />
+      <created>1756710276914</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756710276914</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +208,7 @@
     <MESSAGE value="refactor into components" />
     <MESSAGE value="refactor stats components" />
     <MESSAGE value="crud ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud ok" />
+    <MESSAGE value="failing adapter" />
+    <option name="LAST_COMMIT_MESSAGE" value="failing adapter" />
   </component>
 </project>
