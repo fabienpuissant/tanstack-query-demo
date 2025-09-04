@@ -69,6 +69,7 @@ export default function TodosHeader() {
                 Titre de la tâche
               </label>
               <input
+                data-testid="input-title"
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -85,6 +86,7 @@ export default function TodosHeader() {
               </label>
               <textarea
                 value={description}
+                data-testid="input-description"
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Ex: Acheter du pain, lait et fruits"
                 rows={3}
@@ -94,6 +96,7 @@ export default function TodosHeader() {
 
             <div className="flex gap-3 pt-2">
               <button
+                data-testid="submit"
                 onClick={handleSubmit}
                 className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
               >
