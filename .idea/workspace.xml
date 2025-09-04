@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="no retries">
-      <change afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/__tests__/TodoHeader.spec.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/__tests__/TodoList.spec.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b9ec94d8-5c49-4d49-b88d-755a3eb91323" name="Changes" comment="add some tests">
+      <change afterPath="$PROJECT_DIR$/presentation/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo/infrastructure/primary/TodosHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,7 @@
       <workItem from="1756104081627" duration="4057000" />
       <workItem from="1756707805097" duration="520000" />
       <workItem from="1756708335565" duration="4056000" />
-      <workItem from="1756995969059" duration="1299000" />
+      <workItem from="1756995969059" duration="4260000" />
     </task>
     <task id="LOCAL-00001" summary="init app">
       <option name="closed" value="true" />
@@ -211,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756710365997</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add some tests">
+      <option name="closed" value="true" />
+      <created>1756997309357</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756997309357</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +228,7 @@
     <MESSAGE value="crud ok" />
     <MESSAGE value="failing adapter" />
     <MESSAGE value="no retries" />
-    <option name="LAST_COMMIT_MESSAGE" value="no retries" />
+    <MESSAGE value="add some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some tests" />
   </component>
 </project>
