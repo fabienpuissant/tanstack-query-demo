@@ -1,17 +1,21 @@
-import {StrictMode} from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-import {RouterProvider, createRouter} from '@tanstack/react-router'
-import {MutationCache, QueryClient, QueryClientProvider} from "@tanstack/react-query"
-import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
+import { RouterProvider, createRouter } from '@tanstack/react-router'
+import {
+  MutationCache,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 // Import the generated route tree
-import {Toaster, toast} from "react-hot-toast";
-import {routeTree} from './routeTree.gen'
+import { Toaster, toast } from 'react-hot-toast'
+import { routeTree } from './routeTree.gen'
 
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
-import {TodosProvider} from "@/todo/application/TodosProvider.tsx";
-import TodosAdapter from "@/todo/infrastructure/secondary/TodosAdapter.ts";
+import { TodosProvider } from '@/todo/application/TodosProvider.tsx'
+import TodosAdapter from '@/todo/infrastructure/secondary/TodosAdapter.ts'
 
 // Create a new router instance
 const router = createRouter({
@@ -32,15 +36,20 @@ declare module '@tanstack/react-router' {
 
 const queryClient = new QueryClient({
   defaultOptions: {
+    queries: {
+      staleTime: 5000,
+      gcTime: 10e3,
+      refetchOnReconnect: true,
+    },
     mutations: {
       retry: false,
     },
   },
   mutationCache: new MutationCache({
     onError: (_error) => {
-      toast.error("Ho Fuck")
-    }
-  })
+      toast.error('Ho Fuck')
+    },
+  }),
 })
 
 // Render the app
@@ -51,7 +60,10 @@ if (rootElement && !rootElement.innerHTML) {
     <StrictMode>
       <Toaster />
       <QueryClientProvider client={queryClient}>
-        <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left" />
+        <ReactQueryDevtools
+          initialIsOpen={false}
+          buttonPosition="bottom-left"
+        />
         <TodosProvider repository={new TodosAdapter()}>
           <RouterProvider router={router} />
         </TodosProvider>
