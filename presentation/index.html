@@ -662,10 +662,10 @@ const mutation = useMutation({
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // Données considérées fraîches pendant 5 minutes 
-      // => Si un autre composant a besoin de ces données, elles seront lues dans le cache
+      // Données considérées fraîches pendant 5 minutes
+      // => Si on a un re-render ou refetchOnWindowFocus les données seront lues du cache
       staleTime: 5e3,
-      // Temps de conservation des données dans le cache 
+      // Temps de conservation des données dans le cache
       gcTime: 10e3,
       retry: 2,
       // Refetch lors du focus de la fenêtre

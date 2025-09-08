@@ -12,6 +12,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster, toast } from 'react-hot-toast'
 import { routeTree } from './routeTree.gen'
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 import { TodosProvider } from '@/todo/application/TodosProvider.tsx'
@@ -37,8 +39,8 @@ declare module '@tanstack/react-router' {
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5000,
-      gcTime: 10e3,
+      staleTime: 5e3,
+      gcTime: 3e5,
       refetchOnReconnect: true,
     },
     mutations: {
